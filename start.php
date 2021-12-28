@@ -6,7 +6,7 @@
 <link rel="stylesheet" href="css/wei.css" ;>
 <head>
     <meta charset="UTF-8">
-    <title>21 应三 Java自律学习 在线考试系统</title>
+    <title>在线考试系统</title>
 	<form action="submit.php" method="post" name="submit" οnsubmit="return InputCheck()">
 	<ul class="header_ul">
 	<?php
