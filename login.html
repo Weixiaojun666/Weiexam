@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+	<script src="js/layui.js" ;></script>
+	<link rel="stylesheet" href="css/layui.css" ;>
+	<head>
+		<meta charset="UTF-8">
+		<title>在线考试系统</title>
+	</head>
+	<body style="background: #1E9FFF">
+		<div style="position: absolute; left: 50%; top: 50%;width: 500px; margin-left:-250px; margin-top: -200px">
+			<div style="background: #FFFFFF; padding: 20px;border-radius: 4px;box-shadow: 5px 5px 20px #444444">
+				<div class="layui-form">
+					<form action="login.php" method="post" name="Login" οnsubmit="return InputCheck()">
+						<div class="layui-form-item" style="color: gray">
+							<h2>在线考试系统</h2>
+						</div>
+						<hr>
+						<div class="layui-form-item">
+							<label class="layui-form-label">学 号</label>
+							<div class="layui-input-block">
+					   <input type="text" name="userid" id="userid" placeholder="学号" autocomplete="off"
+									class="layui-input">
+							</div>
+							<label class="layui-form-label">姓 名</label>
+							<div class="layui-input-block">
+								<input type="text" name="username" id="username" placeholder="姓名" autocomplete="off"
+									class="layui-input">
+							</div>
+							<label class="layui-form-label">试卷密码</label>
+							<div class="layui-input-block">
+								<input type="password" name="password" id="password" placeholder="密码" autocomplete="off"
+									class="layui-input">
+							</div>
+						</div>
+						<div class="layui-form-item">
+							<div class="layui-input-block" ;>
+								<input type="submit" value="登录" class="layui-btn">
+								<br>
+								</div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
