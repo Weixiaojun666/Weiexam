@@ -4,7 +4,7 @@
 	$name =$_COOKIE['name'];
 	$id =$_COOKIE['id'];
 	$paper =$_COOKIE['paper'];
-	$conn=mysqli_connect('rm-2ze8d57a30h9j734tho.mysql.rds.aliyuncs.com','exam','hv2SuPc#kCL3K7M','exam','3306');
+	$conn=mysqli_connect();
 	
 	$sql="select ztime from times where id='$id' and paper='$paper' ;";
 	$result=mysqli_query($conn,$sql);
