@@ -19,6 +19,14 @@ function callback(){
  if(xmlHttp.readyState == 4){
   if(xmlHttp.status == 200){
    document.getElementById("showtime").innerHTML = xmlHttp.responseText;
+   if(xmlHttp.responseText=="未开始"){
+	   alert('本场考试未开始');
+	   location='login.html';
+   }
+   if(xmlHttp.responseText=="已结束"){
+   	   alert('本场考试已结束');
+   	   location='login.html';
+   }
    setTimeout("start()",1000);
   }
  }

@@ -6,7 +6,7 @@
 <link rel="stylesheet" href="css/wei.css" ;>
 <head>
     <meta charset="UTF-8">
-    <title>在线考试系统</title>
+    <title>21 应三 Java自律学习 在线考试系统</title>
 	<form action="submit.php" method="post" name="submit" οnsubmit="return InputCheck()">
 	<ul class="header_ul">
 	<?php
@@ -16,7 +16,7 @@
 	if (!isset($_COOKIE['name'])) {
 		echo "<script>location='login.html'</script>";
 		} 
-	$conn=mysqli_connect();
+	$conn=mysqli_connect('rm-2ze8d57a30h9j734tho.mysql.rds.aliyuncs.com','exam','hv2SuPc#kCL3K7M','exam','3306');
 	$sql="select topic from answer where Paper='0' and id ='$id';";
 	$result=mysqli_query($conn,$sql);
 	$row=mysqli_num_rows($result);
@@ -69,7 +69,7 @@
 	$num=0;
 	while(true){
 		$num++;
-		$conn=mysqli_connect();
+		$conn=mysqli_connect('rm-2ze8d57a30h9j734tho.mysql.rds.aliyuncs.com','exam','hv2SuPc#kCL3K7M','exam','3306');
 		$sql="select text from topic where papers='$paper' and tid ='$num';";
 		$result=mysqli_query($conn,$sql);
 		$rows=mysqli_fetch_array($result);
@@ -91,32 +91,6 @@
 		echo '"></textarea>	</li>';
 		echo '	</ul>';
 	}
-		$name =$_COOKIE['name'];
-		$id =$_COOKIE['id'];
-		$paper =$_COOKIE['paper'];
-		$endtime =$_COOKIE['endtime'];
-		$starttime =$_COOKIE['starttime'];
-		date_default_timezone_set('PRC');
-	while(true){
-			 $Nowtime = time();
-			
-			
-			if ($Nowtime < $starttime) {
-			echo "<script>alert('本场考试还未开始!');location='login.html'</script>";
-			}
-			if ($endtime >= $Nowtime) {
-			$lefttime = $endtime - $Nowtime; //实际剩下的时间（秒）
-			} else {
-			$lefttime = 0;
-			echo "<script>alert('本场考试已经结束！');location='index.php'</script>";
-			}
-			if($lefttime<300){
-				echo "<script>alert('剩余答题时间五分钟！请尽快答题！');location='login.html'</script>";
-			}
-			sleep(3);
-	}
-	
-	
 	
 	
 	$conn->close();

@@ -5,7 +5,7 @@
 <link rel="stylesheet" href="css/layui.css" ;>
 <head>
     <meta charset="UTF-8">
-    <title>在线考试系统</title>
+    <title>21 应三 Java自律学习 在线考试系统</title>
 </head>
 <body style="background: #1E9FFF">
 	<?php
@@ -17,7 +17,7 @@
 		echo "<script>location='login.html'</script>";
 	}
 	
-	$conn=mysqli_connect();
+	$conn=mysqli_connect('rm-2ze8d57a30h9j734tho.mysql.rds.aliyuncs.com','exam','hv2SuPc#kCL3K7M','exam','3306');
 	$sql="select title,stime,etime,ztime from papers where paper='$paper';";
 	$result=mysqli_query($conn,$sql);
 	$row=mysqli_fetch_array($result);
@@ -50,8 +50,7 @@
 						 距离本次考试结束还有：
 						 <span id="showtime"></span_id>
 						</p>
-						<br>
-                    </div>
+						                    </div>
                 </div>
             </form>
         </div>
